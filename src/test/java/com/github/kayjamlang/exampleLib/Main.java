@@ -1,4 +1,4 @@
-package com.github.kayjamlang.example_lib;
+package com.github.kayjamlang.exampleLib;
 
 import com.github.kayjamlang.executor.Executor;
 

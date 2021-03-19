@@ -17,7 +17,7 @@ public class ExampleLib extends Library {
 
         // Simple class "simple"
         classes.put("simple", new LibClass("simple", clazz -> {
-            
+
             // Simple companion
             clazz.setCompanion(new LibObject(object -> {
                 // Simple static function "Hi"

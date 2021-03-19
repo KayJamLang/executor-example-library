@@ -1,7 +1,7 @@
 package com.github.kayjamlang.exampleLib;
 
+import com.github.kayjamlang.core.Argument;
 import com.github.kayjamlang.core.Type;
-import com.github.kayjamlang.core.containers.Function;
 import com.github.kayjamlang.executor.libs.Library;
 
 public class ExampleLib extends Library {
@@ -13,10 +13,11 @@ public class ExampleLib extends Library {
         functions.add(new LibFunction("foo", ((mainContext, context) -> {
             System.out.println(context.variables.get("str"));
             return "Test String";
-        }), new Function.Argument(Type.STRING, "str")));
+        }), new Argument(Type.STRING, "str")));
 
-        // Simple class "clss"
-        classes.put("clss", new LibClass("clss", clazz -> {
+        // Simple class "simple"
+        classes.put("simple", new LibClass("simple", clazz -> {
+            
             // Simple companion
             clazz.setCompanion(new LibObject(object -> {
                 // Simple static function "Hi"
@@ -25,8 +26,10 @@ public class ExampleLib extends Library {
                     return null;
                 }));
             }));
+
             // Simple no static variable "i"
             clazz.addVariable("i", 0);
+
             // Simple no static function "foo"
             clazz.addFunction(new LibFunction("foo", (mainContext, context) -> {
                 System.out.println("i = " + context.parentContext.variables.get("i"));

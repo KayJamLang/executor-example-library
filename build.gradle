@@ -13,7 +13,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    implementation "com.github.kayjamlang:executor:0.1.3.9"
+    implementation "com.github.kayjamlang:executor:0.1.3.10"
 }
 
 test {
